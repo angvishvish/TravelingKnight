@@ -1,26 +1,23 @@
-## Basic React Scaffold:
-The goal of this exercise is scaffold out a basic react project using webpack.
+## Traveling Knight:
+The goal of this exercise is to track the movement of a knight given a chess board of **n** size
 ___
 
-As UI engineers, we need to take into account several parameters during our builds and deployments. Over a piece of software's lifespan it's common to outgrow basic webpack configurations. It is important to account for the following:
-
-1. Deployments into prexisting software infrastructures
-2. Toggling features per client or environment
-3. The size of the codebase and the rate at which refactors take place,
-4. Supporting new polyfills and deprecating old ones
-
-Due to these factors a successful front end engineer should have a solid grasp of node.js and webpack
-
 **The following is a spec checklist for our desired functionality:**
-- [ ] Compile Javascript files that may contain JSX and polyfill your favorite JS features
-- [ ] Compile .scss files and autoprefix CSS3/CSS4 features
-- [ ] Demonstrate its functionality by creating two basic javascript (React) and Sass files, and allow webpack to compile them
-  - These files can look and behave however you want them to - a basic header tag with minimal styling is sufficient
-- [ ] When building for production, include an h1 tag in your JSX that states that the app is currently running in production
-- [ ] When compiling in development mode, the same h1 tag should read "This app is running in development mode"
+
+- [ ] Given the following parameters return all possible movements of our knight within the constraints of the board
+    1. **x** - the starting x coordinate of the chess board
+    2. **y** - the starting y coordinate of the chess board
+    3. **n** - The size of the chess board
+- [ ] Our knight cannot go out of the bounds of the board (**size n**)
+- [ ] If our starting coordinate is outside of the board (**size n**) return an empty structure
+- [ ] If our starting coordinates are within the constraints of the board, return an ordered structrure containing all of the possible movements **in the order** they are moved to
+- [ ] The knight **should not** visit the same coordinate twice
+- [ ] Log all returned parameters to the console in a neat and formatted fashion
 
 **A few things to keep in mind during this exercise:**
-
-1. For the sake of brevity there is no need to compile images of any kind or polyfill old browsers - the goal is to simply demonstrate some basic webpack functionality without the help of tools like Create React App, Yeoman, etc.
-2. During a production build it is nice to see optimized files
-3. You will get bonus points for lazy loaded chunks
+1. A knight cannot move outside of our board (**size n**)
+2. A knight moves in **"L"** shaped motions - 1 vertical space and 2 horizontal spaces or 2 vertical spaces and 1 horizontal space
+3. The data structures used during this exercise are totally up to you! Feel free to use dictionaries, maps, lists, objects, and arrays at your own will, as long as the specs of the output are maintained
+4. Concepts like time/space complexity should be accounted for during this exercise
+5. Bonus points are given for clever decisions regarding performance optimization, fast failing, code documentation, and data structure implementations
+6. For this exercise JavaScript is preferred, but if you can make a good case on why another language might be better you are free to do so :)
